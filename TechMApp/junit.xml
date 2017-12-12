@@ -1,0 +1,11 @@
+<suite Name ="TechMApp">
+
+  <test name = "IntegrateJankins">
+
+		<classes>
+		  <class name ="com.java.step_definitions.RunnerTest"></class>
+		</classes>
+
+  </test>
+
+</suite>
