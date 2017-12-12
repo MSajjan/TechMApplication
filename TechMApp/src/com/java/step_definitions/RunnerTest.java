@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		features = "src\\com\\resources\\features",
 	    glue={"com\\java\\step_definitions"},
 		plugin = {"pretty", "html:target/cucumber-html-report"},
-		tags = {"@RegressionTest","@SmokeTEst","@Test"}
+		tags = {}
 		)
 public class RunnerTest{
 	
