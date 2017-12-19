@@ -5,8 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -29,6 +31,14 @@ public class MercuryTours{
     	datamap.add(sampleData);
     }
     
+   /* @Given("^User is on page$")
+	public void user_is_on_Home_Page() throws Throwable 
+	{
+                       
+         System.out.println("Welcome to Tech Mahindra Traning Session!!");
+                         
+	}*/
+     
     @When("^I open automationpractice website$")
     public void i_open_automationpractice_website() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
