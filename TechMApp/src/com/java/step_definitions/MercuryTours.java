@@ -38,7 +38,7 @@ public class MercuryTours{
          System.out.println("Welcome to Tech Mahindra Traning Session!!");
                          
 	}*/
-    
+     
     @When("^I open automationpractice website$")
     public void i_open_automationpractice_website() throws Throwable {
         // Write code here that turns the phrase above into concrete actions

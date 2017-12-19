@@ -33,7 +33,7 @@ public class Hooks{
     public void beforeFirst()
     {
         System.out.println("This will run only before the First Scenario");
-    }	
+    }	 
  
 	@Before("@Second")
     public void beforeSecond()
