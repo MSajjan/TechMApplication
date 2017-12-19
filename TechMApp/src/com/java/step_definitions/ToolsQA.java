@@ -13,6 +13,7 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -25,6 +26,15 @@ public class ToolsQA{
     	driver = Hooks.driver;
     }
     
+    
+
+   /* @Given("^User is on page$")
+	public void user_is_on_Home_Page() throws Throwable 
+	{
+                       
+         System.out.println("Welcome to Tech Mahindra Traning Session!!");
+                         
+	}*/
     @When("^I open seleniumframework website$")
     public void i_open_seleniumframework_website() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -69,13 +79,13 @@ public class ToolsQA{
 			
 		 ###################*/
 		 
-	/*	 Pattern fileNameInput = new Pattern("C:\\Users\\MS00533056\\Desktop\\MSajjan\\Sikuli\\FileName.PNG");
+		 Pattern fileNameInput = new Pattern("C:\\Users\\MS00533056\\Desktop\\MSajjan\\Sikuli\\FileName.PNG");
 	     Pattern openButton = new Pattern("C:\\Users\\MS00533056\\Desktop\\MSajjan\\Sikuli\\OpenButton.PNG");
 	     
 	     Screen screen = new Screen();
 	     screen.wait(fileNameInput,8);
 	     screen.type(fileNameInput, "C:\\Users\\MS00533056\\Desktop\\MSajjan\\Sikuli\\OpenButton.PNG");
-	     screen.click(openButton);*/
+	     screen.click(openButton);
 	     //driver.close();
 	         
          
@@ -85,7 +95,7 @@ public class ToolsQA{
 			
 		 ################### */
 		 
-		    Robot robot = new Robot();
+		  /*  Robot robot = new Robot();
 		    robot.setAutoDelay(2000);
 		 
 		    StringSelection selection = new StringSelection("C:\\Users\\MS00533056\\Desktop\\MSajjan\\AutoIT_SampleTest\\AutoIT.txt");
@@ -102,11 +112,20 @@ public class ToolsQA{
 	        robot.setAutoDelay(1000);
 	 
 	        robot.keyPress(KeyEvent.VK_ENTER);
-	        robot.keyRelease(KeyEvent.VK_ENTER);
+	        robot.keyRelease(KeyEvent.VK_ENTER);*/
 		      
    		    System.out.println("Successfully Uploaded the file");
                  
          
     }  
-    
+    @Given("^this is the first step$")
+	public void This_Is_The_First_Step(){
+		System.out.println("This is the first step");
+	}
+
+	@When("^this is the second step$")
+	public void This_Is_The_Second_Step(){
+		System.out.println("This is the second step");
+	}
+
 }

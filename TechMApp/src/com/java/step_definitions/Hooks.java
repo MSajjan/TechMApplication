@@ -17,9 +17,8 @@ public class Hooks{
 
     
     @Before
-    /**
+    /*
      * Delete all cookies at the start of each scenario to avoid
-     * shared state between tests
      */
     public void openBrowser() throws MalformedURLException {
     	System.out.println("Called openBrowser");
@@ -30,10 +29,20 @@ public class Hooks{
         System.out.println("This will run before the Scenario");
 
     }
-
+    @Before("@First")
+    public void beforeFirst()
+    {
+        System.out.println("This will run only before the First Scenario");
+    }	
+ 
+	@Before("@Second")
+    public void beforeSecond()
+	{
+        System.out.println("This will run only before the Second Scenario");
+    }	
      
     @After
-    /**
+    /*
      * Embed a screenshot in test report if test is marked as failed
      */
     public void embedScreenshot(Scenario scenario)
@@ -43,7 +52,7 @@ public class Hooks{
         {
         try {
         	 scenario.write("Current Page URL is " + driver.getCurrentUrl());
-//            byte[] screenshot = getScreenshotAs(OutputType.BYTES);
+//           byte[] screenshot = getScreenshotAs(OutputType.BYTES);
             byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         } catch (WebDriverException somePlatformsDontSupportScreenshots) {
@@ -55,5 +64,15 @@ public class Hooks{
         System.out.println("This will run after the Scenario");
        
     }
-    
+   
+	@After("@First")
+    public void afterFirst()
+	{
+        System.out.println("This will run only after the First Scenario");   
+    }	
+	@After("@Second")
+    public void afterSecond(){
+        System.out.println("This will run only after the Second Scenario");   
+    }	
+	
 }
